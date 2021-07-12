@@ -18,7 +18,6 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(final StompEndpointRegistry registry) {
-        // 웹소켓을 사용하지 못하는경우 SockJS를 사용하게하는 설정
-        registry.addEndpoint("/gs-guide-websocket").withSockJS();
+        registry.addEndpoint("/chat").withSockJS();
     }
 }
